@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod a=x dir1 dir2
+chmod a+X * dir1 dir2
