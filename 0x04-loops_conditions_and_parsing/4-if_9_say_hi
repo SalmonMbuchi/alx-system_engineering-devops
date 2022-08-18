@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#Display best school 10 times but print hi on the 9th iteration
+NAME="Best School"
+i="0"
+while [ $i -lt 10 ]
+do
+	if [ $i = 9 ]; then
+		echo "Hi"
+	fi	
+	echo "$NAME"
+	i=$(( i+1 ))
+done
