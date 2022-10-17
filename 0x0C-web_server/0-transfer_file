@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # Transfers a file from a client to server"
 
 if [ $# -gt 3 ]; then
