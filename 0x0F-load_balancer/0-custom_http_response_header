@@ -18,10 +18,6 @@ SERVER_CONFIG=\
     root /var/www/html;
     index index.html index.htm index.nginx-debian.html;
     add_header X-Served-By $HOSTNAME;
-    location / {
-      proxy_pass http://backend
-      try_files \$uri \$uri/ =404;
-    }
 
     location /redirect_me {
     return 301 http://cuberule.com/;
