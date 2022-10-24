@@ -4,6 +4,18 @@
 apt-get  -y update
 apt-get install -y nginx
 
-mv /usr/share/nginx/html/index.html /usr/share/nginx/html/index.txt
-echo "Holberton School" > /usr/share/nginx/html/index.html
+mkdir /etc/nginx/html
+touch /etc/nginx/html/index.html
+echo "Holberton School" > /etc/nginx/html/index.html
+printf %s "server {
+    listen      80 default_server;
+    listen      [::]:80 default_server;
+    root        /etc/nginx/html;
+    index       index.html index.htm;
+    server_name _;
+    location / {
+            try_files $uri $uri/ =404;
+  }
+" > /etc/nginx/sites-available/default
+
 service nginx restart
