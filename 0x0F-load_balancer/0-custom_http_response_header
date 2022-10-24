@@ -8,7 +8,8 @@ ufw allow 'Nginx HTTP'
 mkdir -p /var/www/html
 chmod -R 755 /var/www
 echo 'Hello World!' > /var/www/html/index.html
-echo -e "Ceci n'est pas une page" > /var/www/error/404.html
+touch /var/www/html/404.html
+echo -e "Ceci n'est pas une page" > /var/www/html/404.html
 
 SERVER_CONFIG=\
 "server {
@@ -16,20 +17,19 @@ SERVER_CONFIG=\
     listen [::]:80 default_server;
     root /var/www/html;
     index index.html index.htm index.nginx-debian.html;
-    server_name 3.238.99.252;
     add_header X-Served-By $HOSTNAME;
     location / {
       proxy_pass http://backend
       try_files \$uri \$uri/ =404;
     }
 
-    if (\$request_filename ~ redirect_me){
-      rewrite ^ https://sketchfab.com/bluepeno/models permanent;
-      }
+    location /redirect_me {
+    return 301 http://cuberule.com/;
+    }
 
     error_page 404 /404.html;
-    location = /404.html {
-      root /var/www/error/;
+    location = /404 {
+      root /var/www/html/;
       internal;
     }
   }"
