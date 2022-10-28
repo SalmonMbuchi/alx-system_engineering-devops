@@ -6,30 +6,11 @@ add-apt-repository -y ppa:vbernat/haproxy-2.6
 apt-get update
 apt-get install -y haproxy=2.6.\*
 
-echo "ENABLED=1" >> /etc/default/haproxy
-mv /etc/haproxy/haproxy.cfg{,.original}
-touch /etc/haproxy/haproxy.cfg
+cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy_def.cfg
 
-printf %s "global
-    log 127.0.0.1 local0 notice
-    maxconn 2000
-    user haproxy
-    group haproxy
-defaults
-    log     global
-    mode    http
-    option  httplog
-    option  dontlognull
-    retries 3
-    option redispatch
-    timeout connect  5000
-    timeout client  10000
-    timeout server  10000
-listen balance
+printf %s "listen balance
     bind *:80
     mode http
-    stats enable
-    stats uri /haproxy?stats
     balance roundrobin
     option httpchk
     option forwardfor
