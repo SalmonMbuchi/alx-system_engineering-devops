@@ -1,0 +1,10 @@
+frontend myfrontend
+  bind *:80
+  bind *:443 ssl crt /etc/haproxy/certs/www.salmonmbuchi.tech.pem
+  redirect scheme https if !{ ssl_fc }
+  default_backend web-servers
+
+backend web-servers
+  balance roundrobin
+  server 37514-web-01 3.238.99.252:80
+  server 37514-web-02 34.232.71.243:80
