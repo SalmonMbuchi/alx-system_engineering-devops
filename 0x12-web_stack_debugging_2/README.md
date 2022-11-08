@@ -14,7 +14,7 @@ Requirements:
 - the script should run the whoami command under the user passed as an argument
 - make sure to try your script by passing different users
 
-**Run Nginx as Nginx**: [1-run_nginx_as_nginx] (./1-run_nginx_as_nginx)
+**1.Run Nginx as Nginx**: [1-run_nginx_as_nginx] (./1-run_nginx_as_nginx)
 
 Fix this container so that Nginx is running as the nginx user.
 
@@ -25,3 +25,16 @@ Requirements:
 - You cannot use apt-get remove
 - Write a Bash script that configures the container to fit the above requirements
 
+**100-fix_in_7_lines_or_less**: [100-fix_in_7_lines_or_less] (./100-fix_in_7_lines_or_less)
+
+Using what you did for task #1, make your fix short and sweet.
+
+Requirements:
+
+- Your Bash script must be 7 lines long or less
+- There must be a new line at the end of the file
+- You respect Bash script requirements
+- You cannot use ;
+- You cannot use &&
+- You cannot use wget
+- You cannot execute your previous answer file (Do not include the name of the previous script in this one)
