@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""pull data from api and export to json format"""
 import json
 import requests
 import sys

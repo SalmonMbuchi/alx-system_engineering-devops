@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""gather data from all users into json format"""
 import json
 import requests
 

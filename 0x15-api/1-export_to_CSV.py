@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""pull data from api and export to csv format"""
 import csv
 import requests
 import sys

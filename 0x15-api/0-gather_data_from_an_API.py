@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""pull data from api using requests module"""
 import requests
 import sys
 
