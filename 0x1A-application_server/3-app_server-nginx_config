@@ -1,6 +1,7 @@
+#!/usr/bin/env bash
 # Configure Nginx to serve a a page to a Gunicorn instance on port 5001
 
-server
+printf %s "server
 {
   listen 80;
   listen[::]:80;
@@ -13,4 +14,4 @@ server
   {
     proxy_pass http://127.0.0.1:5001;
   }
-}
+}" >> /etc/nginx/sites-available/default
