@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Configure Nginx to serve a REST API to a Gunicorn instance on port 5002
+
+printf %s "server
+{
+  listen 80;
+  listen[::]:80;
+  server_name 100.25.161.104;
+
+  #custom header
+  add_header X-Served-By: $hostname;
+
+  location /api/
+  {
+    proxy_pass http://127.0.0.1:5002;
+  }
+}" >> /etc/nginx/sites-available/default
