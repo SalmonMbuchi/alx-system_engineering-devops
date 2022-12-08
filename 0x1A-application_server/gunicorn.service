@@ -1,0 +1,13 @@
+[Unit]
+Description=Gunicorn instance to serve AirBnB_clone-Web_dynamic
+After=network.target
+
+[Service]
+WorkingDirectory=/home/AirBnb_clone_v4/web_dynamic
+Environment="PATH=/home/AirBnB_clone_v4/web_dynamic/bin"
+ExecStart=/home/AirBnb_clone_v4/web_dynamic/bin/gunicorn --workers 3 2-hbnb:app
+StandardError=file:/tmp/airbnb-error.log
+StandardOutput=file:/tmp/airbnb-access.log
+
+[Install]
+WantedBy=mulit-user.target
