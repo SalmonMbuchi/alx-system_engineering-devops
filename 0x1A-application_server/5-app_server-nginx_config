@@ -15,8 +15,9 @@ printf %s "server
     proxy_pass http://127.0.0.1:5003/2-hbnb;
   }
 
-  location /static
+  location /static/
   {
-	  proxy_pass http://127.0.0.1:5003;
+	root /AirBnB_clone_v4/web_dynamic/static;
+	proxy_pass http://127.0.0.1:5003;
   }
 }" >> /etc/nginx/sites-available/default
