@@ -3,3 +3,43 @@
 A regular expression is a pattern that describes a set of strings. Regular expressions are constructed analogously to arithmetic expressions by using various operators to combine smaller expressions.
 
 The fundamental building blocks are the regular expressions that match a single character. Most characters, including all letters and digits, are regular expressions that match themselves. Any metacharacter with special meaning may be quoted by preceding it with a backslash.
+
+In this project, I learned how to use regular expressions. I practiced building them using Ruby's Oniguruma library.
+
+## Tasks :page_with_curl:
+
+_Note: Each Ruby script in the project matches regular expressions based on an
+argument passed to it via the command line._
+
+* **0. Simply matching Holberton**
+  * [0-simply_match_holberton.rb](./0-simply_match_holberton.rb): Ruby script that
+  matches the regular expression `Holberton`.
+
+* **1. Repetition Token #0**
+  * [1-repetition_token_0.rb](./1-repetition_token_0.rb): Ruby script that matches
+  the regular expression `hbn` with between 2-5 `t`'s in between `hb` and `n`.
+
+* **2. Repetition Token #1**
+  * [2-repetition_token_1.rb](./2-repetition_token_1.rb): Ruby script that matches
+  the regular expression `hn` with 0 or 1 occurrences of `b` and 0 or 1
+  occurrences of `t` in between `h` and `n`.
+
+* **3. Repetition Token #2**
+  * [3-repetition_token_2.rb](./3-repetition_token_2.rb): Ruby script that matches
+  the regular expression `hbn` with 1 or more `t`'s in between `hb` and `n`.
+
+* **4. Repetition Token #3**
+  * [4-repetition_token_3.rb](./4-repetition_token_3.rb): Ruby script that matches the
+  regular expression `hbn` with 0 or more `t`'s in between `hb` and `n`.
+
+* **5. Not quite HBTN yet**
+  * [5-beginning_and_end.rb](./5-beginning_and_end.rb): Ruby script that matches a
+  regular expression starting with `h` and ending with `n` with any single character in between.
+
+* **6. Call me maybe**
+  * [6-phone_number.rb](./6-phone_number.rb): Ruby script that matches a regular expression
+  representing a 10-digit phone number.
+
+* **7. OMG WHY ARE YOU SHOUTING?**
+  * [7-OMG_WHY_ARE_YOU_SHOUTING.rb](./7-OMG_WHY_ARE_YOU_SHOUTING.rb): Ruby script that
+  matches regular expressions of uppercase letters.
