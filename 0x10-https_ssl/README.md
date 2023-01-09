@@ -19,6 +19,6 @@ Requirements:
 - Share your HAproxy config as an answer file (/etc/haproxy/haproxy.cfg)
 
 
-**2. No loophole in your website traffic**: [100-redirect_http_to_https] (./100-redirect_http_to_https)
+**2. No loophole in your website traffic**: [100-redirect_http_to_https](./100-redirect_http_to_https)
 
 Configure HAproxy to automatically redirect HTTP traffic to HTTPS.
